@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Energy Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Green Energy Survey</h2>
+        <form id="surveyForm" method="POST" action="/submit_survey">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="energyUsage">How much energy do you use monthly? (kWh):</label>
+            <input type="number" id="energyUsage" name="energy_usage" placeholder="Energy in kWh" required>
+
+            <label for="interestBiogas">Are you interested in biogas energy?</label>
+            <select id="interestBiogas" name="interest_biogas" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="feedback">Additional Comments or Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" placeholder="Your feedback"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+    <a href="/survey">Take Survey</a>
+
+    <script src="/static/survey.js"></script>
+</body>
+</html>
